@@ -53,5 +53,48 @@ console.log(player["points"]);
 player.fight = false;
 console.log(player.fight);
 player.lastName = "kim";
-console.log(player)
+console.log(player);
+
+// function
+function sayHello(name, age){
+    console.log("Hello " + name + " " + age);
+}
+sayHello("kim",10);
+
+function plus(a,b){
+    console.log(a+b);
+}
+function divide(a,b){
+    console.log(a/b);
+}
+plus(1,5);
+divide(3,3);
+const functionPlayer = {
+    name: "kim",
+    sayHello: function(name){
+        console.log("Hello " + name);
+    },
+};
+console.log(functionPlayer.name);
+functionPlayer.sayHello("lee");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
