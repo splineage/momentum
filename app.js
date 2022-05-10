@@ -4,10 +4,16 @@
 // Use const by default, unless a variable needs to be reassigned.
 let a = 5;
 let b = 5;
-let name = "test"
+let name = "test";
 a=4;
 console.log(a + b);
 console.log(a * b);
 console.log(a / b);
-name = "test2"
+name = "test2";
 console.log("hello " + name);
+
+// boolean
+const ba = null; //nothing
+let something;
+console.log(ba)
+console.log(something)
