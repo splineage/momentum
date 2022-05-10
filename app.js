@@ -15,5 +15,29 @@ console.log("hello " + name);
 // boolean
 const ba = null; //nothing
 let something;
-console.log(ba)
-console.log(something)
+console.log(ba);
+console.log(something); // undefined
+
+//arrays
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
+const arrays = ["mon","tue","wed","thu","fri","sat","sun"];
+const nonsense = [1,2,"hello",false,null,true,undefined,"string"];
+console.log(arrays);
+console.log(nonsense);
+// Get Item from Array
+console.log(arrays[6]);
+console.log(arrays[7]); // undefined
+//Add one more day to the array
+arrays.push("some")
+console.log(arrays);
+
+const toBuy = ["a","b","c"]
+toBuy.push("k")
+console.log(toBuy)
+
