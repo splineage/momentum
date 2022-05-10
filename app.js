@@ -41,3 +41,17 @@ const toBuy = ["a","b","c"]
 toBuy.push("k")
 console.log(toBuy)
 
+// object
+const player = {
+    name: "maru",
+    points: 10,
+    fight: true
+};
+console.log(player);
+console.log(player.name);
+console.log(player["points"]);
+player.fight = false;
+console.log(player.fight);
+player.lastName = "kim";
+console.log(player)
+
