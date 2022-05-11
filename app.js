@@ -52,7 +52,7 @@ console.log(player.name);
 console.log(player["points"]);
 player.fight = false;
 console.log(player.fight);
-player.lastName = "kim";
+player.lastName = "kim"; // add property
 console.log(player);
 
 // function
@@ -79,14 +79,53 @@ console.log(functionPlayer.name);
 functionPlayer.sayHello("lee");
 
 
+const calculator = {
+    add: function(a,b){
+        // console.log(a+b);
+        // alert(a+b);
+        // no return -> undefined
+        return a+b;
+    },
+    minus: function(a,b){
+        // console.log(a-b);
+        return a-b;
+    },
+    multiply: function(a,b){
+        // console.log(a*b);
+        return a*b;
+    },
+    divide: function(a,b){
+        // console.log(a/b);
+        return a/b;
+    },
+    powerof: function(a,b){
+        // console.log(a**b);
+        return a**b;
+    }
+}
+calculator.add(1,2);
+calculator.minus(2,1);
+calculator.divide(6,3);
+calculator.multiply(4,2);
+calculator.powerof(2,3);
 
+// returns
+const age = 50;
+function caculateKorAge(ageOfForeigner){ // 타입이 없으니 리턴타입 설정이 없는듯?
+    return ageOfForeigner + 2;
+}
+const krAge = caculateKorAge(age);
+console.log(krAge);
 
+console.log(calculator.add(2,2));
 
+const plusResult = calculator.add(2,3);
+const minusResult = calculator.minus(plusResult, 10);
+const multiplyResult = calculator.multiply(10, minusResult);
+const divideResult = calculator.divide(multiplyResult, plusResult);
+const powerResult = calculator.powerof(divideResult, minusResult);
 
-
-
-
-
+console.log(5-10);
 
 
 
