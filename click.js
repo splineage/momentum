@@ -26,3 +26,5 @@ function handleMouseLeave(){
 h2.onclick = handleH2Click;
 h2.onmouseenter = handleMouseEnter;
 h2.onmouseleave = handleMouseLeave;
+
+//control css
