@@ -1,3 +1,15 @@
 body{
     background-color: beige;
 }
+
+h2{
+    color: cornflowerblue;
+    transition: color 0.5s ease-in-out;
+}
+
+.clicked{
+    color: tomato;
+}
+.my-font{
+    font: 30px sans-serif
+}
