@@ -9,6 +9,25 @@ const loginButton = document.querySelector("#login-form button");
 const afterLogin = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME = "username";
+const savedUsername = localStorage.getItem(USERNAME);
+
+
+if(savedUsername === null){
+    // show the form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    afterLogin.classList.add(HIDDEN_CLASSNAME);
+    // html form -> auto submit
+    loginForm.addEventListener("submit", onLoginSubmit); // catch submit event
+    // 모든 event function 의 첫번째 argument 는 information 로 전달됨.
+}else{
+    // show the greeting
+    paintGreetings(savedUsername);
+}
+
+function paintGreetings(username){
+    afterLogin.innerText = `Hello ${username}`; // string combine
+    afterLogin.classList.toggle(HIDDEN_CLASSNAME);
+}
 
 function checkUsername(inputValue){
     if(inputValue === ""){
@@ -32,7 +51,6 @@ function handleLoginButton(){
     // loginInput.value = ""
     // console.log("clicked");
 }
-
 // loginButton.addEventListener("click", handleLoginButton);
 
 function onLoginSubmit(event){
@@ -45,14 +63,12 @@ function onLoginSubmit(event){
     localStorage.setItem(USERNAME,username);
     console.log(localStorage.getItem(USERNAME));
 
-    afterLogin.innerText = `Hello ${username}`; // string combine
-    afterLogin.classList.toggle(HIDDEN_CLASSNAME);
+    paintGreetings(username);
+    
     console.log(username);
 }
 
-// html form -> auto submit
-loginForm.addEventListener("submit", onLoginSubmit); // catch submit event
-// 모든 event function 의 첫번째 argument 는 information 로 전달됨.
+
 
 // link preventDefault
 const link = document.querySelector("a");
