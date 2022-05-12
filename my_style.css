@@ -1,0 +1,10 @@
+/* 
+visibility:hidden -> 공간 O (invisibility)
+display:none -> 공간 X (gone)
+ */
+.hidden{
+    display: none;
+}
+.a{
+    display: none;
+}

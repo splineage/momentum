@@ -4,9 +4,11 @@ const loginForm = document.getElementById("login-form");
 // console.log(loginForm);
 // const loginInput = loginForm.querySelector("input");
 // const loginButton = loginForm.querySelector("button");
-const loginInput = document.querySelector("#login-form input");
+const loginInput = document.querySelector("#login-form input"); // #id
 const loginButton = document.querySelector("#login-form button");
-
+const afterLogin = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME = "username";
 
 function checkUsername(inputValue){
     if(inputValue === ""){
@@ -34,11 +36,18 @@ function handleLoginButton(){
 // loginButton.addEventListener("click", handleLoginButton);
 
 function onLoginSubmit(event){
-    event.preventDefault(); // Default 기능 동작 정지.
+    event.preventDefault(); // form Default 기능 동작 정지.
     console.log(event);
     const username = loginInput.value;
-    console.log(username);
+    loginForm.classList.toggle(HIDDEN_CLASSNAME);
+    
+    // save value : localStorage API
+    localStorage.setItem(USERNAME,username);
+    console.log(localStorage.getItem(USERNAME));
 
+    afterLogin.innerText = `Hello ${username}`; // string combine
+    afterLogin.classList.toggle(HIDDEN_CLASSNAME);
+    console.log(username);
 }
 
 // html form -> auto submit
@@ -54,3 +63,6 @@ function handleLinkClick(event){
     console.log("clicked");
 }
 link.addEventListener("click", handleLinkClick);
+
+
+
