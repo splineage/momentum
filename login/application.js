@@ -9,7 +9,7 @@ const loginButton = document.querySelector("#login-form button");
 const afterLogin = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME = "username";
-const savedUsername = localStorage.getItem(USERNAME);
+const savedUsername = localStorage.getItem(USERNAME); // get false -> return null
 
 
 if(savedUsername === null){
