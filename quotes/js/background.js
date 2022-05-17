@@ -15,4 +15,4 @@ bgImage.src = `img/${chosenImage}`;
 console.log(bgImage); 
 
 // where?
-document.body.appendChild(bgImage);
+document.body.appendChild(bgImage); // append(last) & prepend(top)
